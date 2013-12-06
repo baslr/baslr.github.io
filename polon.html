@@ -6,9 +6,9 @@
 
 <script type="text/javascript">
 d = new Date();
-d = d.getFullYear().toString()+(d.getMonth()+1).toString()+('0'+d.getDate()).slice(-2)
+d = [d.getFullYear(), d.getMonth()+1, ('0'+d.getDate()).slice(-2)].join('');
 
-document.location = 'http://poleon.de/stundenplan/week.php?cpath=&cal=BA1104-5.Semester&getdate='+d
+document.location = 'http://poleon.de/stundenplan/week.php?cpath=&cal=BA1104-5.Semester&getdate='+d;
 
 </script>
 
