@@ -6,7 +6,7 @@
 
 <script type="text/javascript">
 d = new Date();
-d = [d.getFullYear(), ('0'+d.getMonth()+1).slice(-2), ('0'+d.getDate()).slice(-2)].join('');
+d = [d.getFullYear(), ('0'+(d.getMonth()+1)).slice(-2), ('0'+d.getDate()).slice(-2)].join('');
 
 document.location = 'http://poleon.de/stundenplan/week.php?cpath=&cal=BA1104-5.Semester&getdate='+d;
 
