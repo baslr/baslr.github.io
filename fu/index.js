@@ -27,6 +27,7 @@
         return Number(a) - Number(b);
       });
       console.log(out);
+      $('TEXTAREA#textarea');
       return void 0;
     });
     return void 0;

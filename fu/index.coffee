@@ -21,5 +21,7 @@ $.get '/fu/data.json', (dataIn) -> data = dataIn
     out.sort (a, b) -> Number(a) - Number(b)
 
     console.log out
+
+    ($ 'TEXTAREA#textarea')
     undefined
   undefined
