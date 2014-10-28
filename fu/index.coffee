@@ -4,18 +4,20 @@ data = []
 
 $.get '/fu/data.json', (dataIn) -> data = dataIn
 
-($ 'BUTTON#submitButton').click () ->
-  console.log 'clicked'
-  number = Number ($ 'INPUT#inputField').val()
-  list   = [number]
 
-  out = []
+($ document).ready () ->
+  ($ 'BUTTON#submitButton').click () ->
+    console.log 'clicked'
+    number = Number ($ 'INPUT#inputField').val()
+    list   = [number]
 
-  while item = list.shift()
+    out = []
 
-    list.push.apply list, data[item] if data[item]
-    out.push.apply  out,  data[item] if data[item]
+    while item = list.shift()
 
-  out.sort (a, b) -> Number(a) - Number(b)
+      list.push.apply list, data[item] if data[item]
+      out.push.apply  out,  data[item] if data[item]
 
-  console.log out
+    out.sort (a, b) -> Number(a) - Number(b)
+
+    console.log out

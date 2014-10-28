@@ -8,24 +8,26 @@
     return data = dataIn;
   });
 
-  ($('BUTTON#submitButton')).click(function() {
-    var item, list, number, out;
-    console.log('clicked');
-    number = Number(($('INPUT#inputField')).val());
-    list = [number];
-    out = [];
-    while (item = list.shift()) {
-      if (data[item]) {
-        list.push.apply(list, data[item]);
+  ($(document)).ready(function() {
+    return ($('BUTTON#submitButton')).click(function() {
+      var item, list, number, out;
+      console.log('clicked');
+      number = Number(($('INPUT#inputField')).val());
+      list = [number];
+      out = [];
+      while (item = list.shift()) {
+        if (data[item]) {
+          list.push.apply(list, data[item]);
+        }
+        if (data[item]) {
+          out.push.apply(out, data[item]);
+        }
       }
-      if (data[item]) {
-        out.push.apply(out, data[item]);
-      }
-    }
-    out.sort(function(a, b) {
-      return Number(a) - Number(b);
+      out.sort(function(a, b) {
+        return Number(a) - Number(b);
+      });
+      return console.log(out);
     });
-    return console.log(out);
   });
 
 }).call(this);
