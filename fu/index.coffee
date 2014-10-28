@@ -2,12 +2,10 @@
 
 data = []
 
-$.get '/fu/data.json', (dataIn) ->
-  data = dataIn
-
-  console.log(dataIn);
+$.get '/fu/data.json', (dataIn) -> data = dataIn
 
 ($ 'BUTTON#submitButton').click () ->
+  console.log 'clicked'
   number = Number ($ 'INPUT#inputField').val()
   list   = [number]
 

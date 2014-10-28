@@ -5,12 +5,12 @@
   data = [];
 
   $.get('/fu/data.json', function(dataIn) {
-    data = dataIn;
-    return console.log(dataIn);
+    return data = dataIn;
   });
 
   ($('BUTTON#submitButton')).click(function() {
     var item, list, number, out;
+    console.log('clicked');
     number = Number(($('INPUT#inputField')).val());
     list = [number];
     out = [];
