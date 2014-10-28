@@ -5,6 +5,7 @@
   <title>FU</title>
   <script type="text/javascript" src="/js/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/fu/index.js"></script>
   <link href="/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
@@ -33,25 +34,6 @@
       </div>
     </div>
   </div>
-
-  <script type="text/javascript">
-
-  var data = [];
-
-  $.get('/fu/data.json', function(dataIn) {
-    data = dataIn;
-
-    console.log(dataIn);
-  });
-
-  $('BUTTON#submitButton').click( function() {
-    console.log( Number($('INPUT#inputField').val()) );
-  });
-
-
-
-
-  </script>
 </body>
 
 
