@@ -34,6 +34,7 @@
       txt = txt.slice(0, -1);
       ($('TEXTAREA#textarea')).text(txt);
       ($('textarea#textarea')).attr('rows', out.length);
+      ($('textarea#textarea')).css('visibility', 'visible');
       return void 0;
     });
     return void 0;

@@ -26,5 +26,6 @@ $.get '/fu/data.json', (dataIn) -> data = dataIn
 
     ($ 'TEXTAREA#textarea').text txt
     ($ 'textarea#textarea').attr('rows', out.length)
+    ($ 'textarea#textarea').css 'visibility', 'visible'
     undefined
   undefined
