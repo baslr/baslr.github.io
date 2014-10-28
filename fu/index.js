@@ -9,7 +9,7 @@
   });
 
   ($(document)).ready(function() {
-    return ($('BUTTON#submitButton')).click(function() {
+    ($('BUTTON#submitButton')).click(function() {
       var item, list, number, out;
       console.log('clicked');
       number = Number(($('INPUT#inputField')).val());
@@ -26,8 +26,10 @@
       out.sort(function(a, b) {
         return Number(a) - Number(b);
       });
-      return console.log(out);
+      console.log(out);
+      return void 0;
     });
+    return void 0;
   });
 
 }).call(this);
