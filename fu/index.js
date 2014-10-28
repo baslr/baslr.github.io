@@ -10,7 +10,7 @@
 
   ($(document)).ready(function() {
     ($('BUTTON#submitButton')).click(function() {
-      var item, list, number, out;
+      var item, list, number, out, t, txt, _i, _len;
       console.log('clicked');
       number = Number(($('INPUT#inputField')).val());
       list = [number];
@@ -26,8 +26,14 @@
       out.sort(function(a, b) {
         return Number(a) - Number(b);
       });
-      console.log(out);
-      $('TEXTAREA#textarea');
+      txt = '';
+      for (_i = 0, _len = out.length; _i < _len; _i++) {
+        t = out[_i];
+        txt += "" + t + "\n";
+      }
+      txt = txt.slice(0, -1);
+      ($('TEXTAREA#textarea')).text(txt);
+      ($('textarea#textarea')).attr('rows', out.length);
       return void 0;
     });
     return void 0;

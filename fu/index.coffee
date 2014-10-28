@@ -20,8 +20,11 @@ $.get '/fu/data.json', (dataIn) -> data = dataIn
 
     out.sort (a, b) -> Number(a) - Number(b)
 
-    console.log out
+    txt = ''
+    txt += "#{t}\n" for t in out
+    txt = txt.slice 0, -1
 
-    ($ 'TEXTAREA#textarea')
+    ($ 'TEXTAREA#textarea').text txt
+    ($ 'textarea#textarea').attr('rows', out.length)
     undefined
   undefined
