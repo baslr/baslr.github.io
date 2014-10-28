@@ -20,19 +20,38 @@
 
           <div class="form-group">
             <div class="col-sm-12">
-              <input type="text" class="form-control" id="inputField" placeholder="Password">
+              <input type="text" class="form-control" id="inputField" placeholder="type in one number">
             </div>
           </div>
 
           <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
-              <button type="button" class="btn btn-default">compute</button>
+            <div class="col-sm-12">
+              <button type="button" id="submitButton" class="btn btn-primary btn-lg btn-block">compute</button>
             </div>
           </div>
         </form>
       </div>
     </div>
   </div>
+
+  <script type="text/javascript">
+
+  var data = [];
+
+  $.get('/fu/data.json', function(dataIn) {
+    data = dataIn;
+
+    console.log(dataIn);
+  });
+
+  $('BUTTON#submitButton').click( function() {
+    console.log( Number($('INPUT#inputField').val()) );
+  });
+
+
+
+
+  </script>
 </body>
 
 
